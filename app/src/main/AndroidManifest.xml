@@ -2,17 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <application
-        android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.MyApplication">
+    <!-- The INTERNET permission is required for network operations -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
-        <!-- SplashActivity is now the starting point of the app -->
+    <application
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="false"
+        android:icon="@drawable/splash"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/splash"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:replace="android:fullBackupContent">
+
+        <!-- SplashActivity is the starting point of the app -->
         <activity
             android:name=".view.SplashActivity"
             android:exported="true">
@@ -22,10 +26,74 @@
             </intent-filter>
         </activity>
 
-        <!-- MainActivity is now a regular activity -->
+        <!-- Onboarding Activity -->
+        <activity
+            android:name=".view.OnboardingActivity"
+            android:exported="false" />
+
+        <!-- Role Selection Activity -->
+        <activity
+            android:name=".view.RoleSelectionActivity"
+            android:exported="false" />
+
+        <!-- Login Activity with a specific Material Components theme -->
+        <activity
+            android:name=".view.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+
+        <!-- Register Activity with a specific Material Components theme -->
+        <activity
+            android:name=".view.RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+
+        <!-- Conductor Register Activity with a specific Material Components theme -->
+        <activity
+            android:name=".view.ConductorRegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+
+        <!-- Admin Register Activity -->
+        <activity
+            android:name=".view.AdminRegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+
+        <!-- Admin Dashboard Activity -->
+        <activity
+            android:name=".view.AdminDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+
+        <!-- Conductor List Activity -->
+        <activity
+            android:name=".view.ConductorListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+
+        <!-- Bus Schedule Activity (ADDED FIX) -->
+        <activity
+            android:name=".view.ScheduleActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+
+        <!-- Passenger Profile Activity -->
+        <activity
+            android:name=".view.PassengerProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        
+        <activity
+            android:name=".view.BusSlotsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+
+        <!-- MainActivity now has the CORRECT theme to prevent crashing -->
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
 
     </application>
 

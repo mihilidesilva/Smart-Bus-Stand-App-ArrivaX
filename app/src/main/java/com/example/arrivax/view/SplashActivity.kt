@@ -9,29 +9,33 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.arrivax.MainActivity
 import com.example.arrivax.R
+import com.google.firebase.auth.FirebaseAuth
 
 class SplashActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        // Find the ImageView for the logo
-        val splashLogo: ImageView = findViewById(R.id.splash_logo)
-
-        // Load the fade-in animation
         val fadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.fade_in)
-
-        // Start the animation on the logo
+        val splashLogo: ImageView = findViewById(R.id.splashLogo)
         splashLogo.startAnimation(fadeInAnimation)
 
-        // Use a Handler to delay the navigation to the main screen
         Handler(Looper.getMainLooper()).postDelayed({
-            // Create an Intent to start MainActivity
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            // Finish SplashActivity so the user cannot navigate back to it
-            finish()
-        }, 2500) // 2500 milliseconds = 2.5 seconds
+            checkUserAndRedirect()
+        }, 1800)
+    }
+
+    private fun checkUserAndRedirect() {
+        val firebaseUser = FirebaseAuth.getInstance().currentUser
+
+        if (firebaseUser == null) {
+            // No user is signed in, proceed to the standard onboarding flow
+            startActivity(Intent(this, OnboardingActivity::class.java))
+        } else {
+            // User is signed in, ALWAYS go to MainActivity.
+            // MainActivity will handle showing the correct screen based on the user's role.
+            startActivity(Intent(this, MainActivity::class.java))
+        }
+        finish() // Finish SplashActivity in both cases
     }
 }

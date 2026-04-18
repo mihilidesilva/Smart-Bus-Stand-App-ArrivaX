@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">ArrivaX</string>
+
+    <!-- Onboarding Screen 1 -->
+    <string name="onboarding_title_1">Welcome to ArrivaX</string>
+    <string name="onboarding_desc_1">A smarter, IoT-powered way to navigate your commute.</string>
+
+    <!-- Onboarding Screen 2 -->
+    <string name="onboarding_title_2">Live Slot Monitoring</string>
+    <string name="onboarding_desc_2">Instant occupancy updates powered by IoT sensors.</string>
+
+    <!-- Onboarding Screen 3 -->
+    <string name="onboarding_title_3">No More Guesswork</string>
+    <string name="onboarding_desc_3">Live waiting time estimates at your fingertips.</string>
+
 </resources>

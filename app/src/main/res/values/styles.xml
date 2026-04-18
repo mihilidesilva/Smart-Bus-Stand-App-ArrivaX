@@ -1,3 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Style for the AlertDialogs to match the app theme -->
+    <style name="AlertDialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <!-- Color for the positive and negative buttons -->
+        <item name="colorAccent">@color/dark_red</item>
+        <!-- Text color for the title -->
+        <item name="android:textColorPrimary">@color/black</item>
+        <!-- Background color of the dialog -->
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <!-- Custom Style for PopupMenu to match app colors -->
+    <style name="PopupMenuStyle" parent="Widget.AppCompat.Light.PopupMenu">
+        <item name="android:popupBackground">@color/white</item>
+    </style>
+
+    <!-- Custom Theme for PopupMenu items -->
+    <style name="PopupMenuTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColor">@color/dark_red</item>
+        <item name="android:textSize">16sp</item>
+        <!-- Background color of the menu items -->
+        <item name="android:itemBackground">@color/white</item>
+        <item name="actionMenuTextColor">@color/dark_red</item>
+    </style>
+
+    <!-- CONDUCTOR FEATURE: Custom style for rounded profile images -->
+    <style name="CircleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>

@@ -4,4 +4,17 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="gray">#6B6969</color>
+    <color name="light_gray">#F5F5F5</color>
+
+    <!-- Status colors for the conductor list -->
+    <color name="status_active">#4CAF50</color> <!-- Green -->
+    <color name="status_inactive">#9E9E9E</color> <!-- Grey -->
+
+    <!-- Teal colors for switches and accents -->
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <!-- HOME FEATURE: Chip highlight colors for the scrollable categories -->
+    <color name="chip_selected">#BA0406</color> <!-- Same as dark_red for consistency -->
+    <color name="chip_unselected">#F5F5F5</color>
 </resources>

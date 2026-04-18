@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "942760825692",
+    "project_id": "arrivax-a7884",
+    "storage_bucket": "arrivax-a7884.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942760825692:android:273fdf352873de5e47e799",
+        "android_client_info": {
+          "package_name": "com.example.arrivax"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbpZurbC8S-mqefShyPlE_HtPoFrU04_I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

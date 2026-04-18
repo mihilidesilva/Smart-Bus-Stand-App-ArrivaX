@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.arrivax" />
+                  <option name="mobileSdkAppId" value="1:942760825692:android:273fdf352873de5e47e799" />
+                  <option name="projectId" value="arrivax-a7884" />
+                  <option name="projectNumber" value="942760825692" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
